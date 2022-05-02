@@ -11,6 +11,9 @@ const app=Vue.createApp(
         methods:{
            toggleShowBooks(){
                this.showBooks=!this.showBooks;
+           },
+           handleEvent(e){
+               console.log(e, e.type)
            }
         }
     }

@@ -30,10 +30,10 @@
 
         </button>
         <!-- mouse events -->
-        <div class="box" v-on:mouseover="handleEvent($event,5)">mouseover (enter)</div>
+        <div class="box" @mouseover="handleEvent($event,5)">mouseover (enter)</div>
         <div class="box" @mouseleave="handleEvent"> mouseleave</div>
         <div class="box" @dblclick="handleEvent">doubleclick</div>
-        <div class="box"></div>
+        <div class="box" @mousemove="handleMousemove">position - {{x}} {{y}}</div>
 
     </div>
 

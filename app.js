@@ -37,16 +37,13 @@ const app = Vue.createApp(
                 book.isFav = !book.isFav
 
             },
-            handleEvent(e) {
-                console.log(e, e.type)
-                if (data) {
-                    console.log(data)
+           
+            computed:{
+                filteredBooks(){
+                    return this.books.filter((book) => book.isFav)
                 }
-            },
-            handleMousemove(e) {
-                this.x = e.offsetX
-                this.y = e.offsetY
             }
+           
         }
     }
 )
